@@ -14,7 +14,8 @@ class _LandingScreenState extends State<LandingScreen> {
   void goTologin() {
     Navigator.pushNamed(context, 'login');
   }
-  void goToRegister(){
+
+  void goToRegister() {
     Navigator.pushNamed(context, 'register');
   }
 
@@ -22,14 +23,14 @@ class _LandingScreenState extends State<LandingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Landing Screen'),
+        title: const Text('Landing Screen'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          TextButton(onPressed: goTologin, child: Text('Login')),
-          TextButton(onPressed: goToRegister, child: Text('Register')),
+          TextButton(onPressed: goTologin, child: const Text('Login')),
+          TextButton(onPressed: goToRegister, child: const Text('Register')),
         ],
       ),
     );

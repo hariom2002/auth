@@ -11,7 +11,7 @@ class Auth extends LoginScreen {
 
   Auth(String this.mail, String this.pass, {super.key});
 
-  void signUpWithEmailAndPassword(String mail, String pass) {
-    auth.createUserWithEmailAndPassword(email: mail, password: pass);
-  }
+  // void signUpWithEmailAndPassword(String mail, String pass) {
+  //   auth.createUserWithEmailAndPassword(email: mail, password: pass);
+  // }
 }

@@ -16,10 +16,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final mail = TextEditingController();
   final pass = TextEditingController();
 
-  void nextPage() {
-    Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => Auth(mail.text, pass.text)));
-  }
+  // void nextPage() {
+  //   Navigator.of(context).push(
+  //       MaterialPageRoute(builder: (context) => Auth(mail.text, pass.text)));
+  // }
 
   @override
   Widget build(BuildContext context) {

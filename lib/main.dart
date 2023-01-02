@@ -8,11 +8,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'firebase_options.dart';
 
-
-void main()async {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-);
+  );
   runApp(const MyApp());
 }
 
@@ -25,17 +25,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes:{
-       '/':(context) =>const LandingScreen(),
-       'login':(context) => const LoginScreen(),
-       'register':(context) => const RegisterScreen(),
-       'final':(context) => const FinalScreen(),
+      routes: {
+        '/': (context) => const LandingScreen(),
+        'login': (context) => const LoginScreen(),
+        'register': (context) => const RegisterScreen(),
+        'final': (context) => const FinalScreen(),
       },
+      home: const LandingScreen(),
     );
   }
 }
-
